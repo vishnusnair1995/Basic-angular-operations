@@ -1,0 +1,21 @@
+<div>
+  <h1>Congratulations!</h1>
+  <h4>You got your component to display!</h4>
+  <hr>
+  <h5>How does your childArray look below?</h5>
+
+  <div style="margin-top:30px">
+    childArray: {{childArray.name}}
+  </div>
+
+  <div>
+    Date: {{childArray.date}}
+  </div>
+  <div>
+    Time: {{childArray.time}}
+  </div>
+  <div>
+    Address:
+    <app-subchild [addressArray]="childArray.location"></app-subchild>
+    </div>
+</div>
