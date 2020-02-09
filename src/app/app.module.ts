@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule}   from '@angular/forms';
+import {FormsModule, ReactiveFormsModule}   from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ArrayComponent } from './array/array.component';
@@ -13,7 +13,10 @@ import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { HeaderComponent } from './header/header.component';
 
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+import { TutorialComponent } from './tutorial/tutorial.component';
+import { RegistrationformComponent } from './component/registrationform/registrationform.component'
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,16 +27,16 @@ import { AppRoutingModule } from './app-routing.module'
     Page1Component,
     Page2Component,
     HeaderComponent,
+    TutorialComponent,
+    RegistrationformComponent,
   ],
   imports: [
     BrowserModule,
-
-   NgxCurrencyModule,
-   AppRoutingModule,
-
-
-
-    FormsModule
+    ReactiveFormsModule,
+    NgxCurrencyModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]})
